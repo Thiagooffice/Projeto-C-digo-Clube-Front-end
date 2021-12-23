@@ -4,6 +4,8 @@ import Background from '../../assets/background.svg'
 
 
 
+
+
 export const Container = styled.div`
     background: url("${Background}");
     background-size: cover;
@@ -11,8 +13,7 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    height: 100vh;
-    
+    height: 100%;
 `
 export const Imagem = styled.img`
     margin-top: 30px;
@@ -25,6 +26,8 @@ export const ContainerItens = styled.div`
     flex-direction: column;
     height: 100vh;
     backdrop-filter: blur(45px);
+    height: 100%;
+    min-height: 100vh;
 `
 
 export const H1 = styled.h1`
@@ -80,7 +83,7 @@ export const User = styled.li`
     margin-top: 20px;
 
     p{
-        font-style: normal;
+    font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;

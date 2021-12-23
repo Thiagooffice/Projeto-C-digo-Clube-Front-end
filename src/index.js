@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/Home';
+import Rotas from './routes'
 import GlobalStyle from './globalStyle'
-import Users from './pages/Users'
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Users />
+    <Rotas />
     <GlobalStyle/>
   </React.StrictMode>,
   document.getElementById('root')

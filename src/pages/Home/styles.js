@@ -4,6 +4,7 @@ import Background from '../../assets/background1.svg'
 
 
 
+
 export const Container = styled.div`
     background: url("${Background}");
     background-size: cover;
@@ -24,15 +25,7 @@ export const ContainerItens = styled.div`
     flex-direction: column;
 `
 
-export const H1 = styled.h1`
-    font-style: normal;
-    font-weight: bold;
-    font-size: 34px;
-    line-height: 40px;
-    text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 80px;
-`
+
 export const InputLabel = styled.p`
     font-style: normal;
     font-size: 18px;

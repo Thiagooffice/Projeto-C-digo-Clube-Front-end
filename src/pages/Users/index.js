@@ -4,11 +4,13 @@ import { Container,Imagem,ContainerItens,H1,Button, User } from './styles'
 import Avatar from '../../assets/avatar.svg'
 import Arrow from '../../assets/arrow.svg'
 import Trash from '../../assets/trash.svg'
+import {useNavigate} from 'react-router-dom'
 
 
 export default function Users() {
 
   const [users, setUsers] =  useState([])
+  const navigate = useNavigate()
   
 
 useEffect(()=>{
@@ -27,6 +29,12 @@ useEffect(()=>{
     const newUsers = users.filter(user => user.id !== userId)
 
     setUsers(newUsers)
+  }
+
+  function goBackPage(){
+    
+    navigate("/")
+
   }
   
 
@@ -49,7 +57,9 @@ useEffect(()=>{
        }
      </ul>
 
-     <Button> <img alt="seta" src={Arrow} /> Voltar</Button>
+      
+         <Button onClick={goBackPage} > <img alt="seta" src={Arrow} /> Voltar</Button>
+       
 
      </ContainerItens>
    </Container>
