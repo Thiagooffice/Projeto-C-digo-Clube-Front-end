@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import { Container,Imagem,ContainerItens,H1,Button, User } from './styles'
+import {Imagem,Container, User } from './styles'
 import Avatar from '../../assets/avatar.svg'
 import Arrow from '../../assets/arrow.svg'
 import Trash from '../../assets/trash.svg'
 import {useNavigate} from 'react-router-dom'
+import ContainerItens from '../../components/ContainerItens'
+import H1 from '../../components/Title'
+import Button from '../../components/Button'
 
 
 export default function Users() {
@@ -41,7 +44,7 @@ useEffect(()=>{
  return (
    <Container>
      <Imagem alt="logo-image" src={Avatar}/>
-     <ContainerItens>
+     <ContainerItens isBlur={true}>
      <H1>Usuários</H1>
 
 
@@ -58,7 +61,7 @@ useEffect(()=>{
      </ul>
 
       
-         <Button onClick={goBackPage} > <img alt="seta" src={Arrow} /> Voltar</Button>
+         <Button isBack={true} onClick={goBackPage} > <img alt="seta" src={Arrow} /> Voltar</Button>
        
 
      </ContainerItens>
